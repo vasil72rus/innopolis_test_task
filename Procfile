@@ -1,1 +1,1 @@
-web: python3 payment/manage.py runserver
+web: python3 payment/manage.py runserver 0.0.0.0
