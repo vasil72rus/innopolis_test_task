@@ -23,8 +23,8 @@ def buy_item(request, id):
         'quantity': 1
     }],
     mode='payment',
-    success_url='http://127.0.0.1:8000/item/{}'.format(id),
-    cancel_url='http://127.0.0.1:8000/item/{}'.format(id),
+    success_url='/item/{}'.format(id),
+    cancel_url='/item/{}'.format(id),
     )
 
     print(session.id)
@@ -47,8 +47,8 @@ def buy_order(request, id):
         'quantity': 1
     } for item in items],
     mode='payment',
-    success_url='http://127.0.0.1:8000/item/{}'.format(id),
-    cancel_url='http://127.0.0.1:8000/item/{}'.format(id),
+    success_url='/item/{}'.format(id),
+    cancel_url='/item/{}'.format(id),
     )
 
     return redirect(session.url, code=303)
